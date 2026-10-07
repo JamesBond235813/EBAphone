@@ -1,0 +1,24 @@
+# Secrets and local runtime data
+.env
+.env.*
+!.env.example
+backend/.env
+backend/*.sqlite
+backend/*.sqlite3
+backend/*.db
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.venv.*/
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+
+# Local logs, backups, and OS files
+logs/
+backups/
+.DS_Store
