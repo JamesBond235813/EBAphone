@@ -215,3 +215,4 @@
 - 加入 `.gitignore`，排除了本地环境密钥、SQLite 数据库、虚拟环境、前端依赖与构建产物、日志、备份和系统文件；只提交源代码、依赖锁定文件、示例环境配置和文档。
 - 已创建初始提交 `a67f9bc`（`Initial EBAphone project import`）。
 - 推送尚未成功：当前环境的 macOS Keychain 没有可用于该 GitHub HTTPS 推送的凭据，Git 返回 `could not read Username for 'https://github.com'`。本地提交和远端配置已保留，完成 GitHub 登录/凭据配置后可运行 `git push -u origin main`。
+- 后续确认：现有 SSH key 的身份为账户 `JamesBond235813`，但它绑定为其他仓库的 deploy key，向本仓库推送被拒。为账户认证生成了独立本机密钥 `~/.ssh/github_ebaphone_2026`；添加其公钥到账户会扩大账户访问能力，正在等待用户对该权限变更的确认。完成添加后再推送 `main`。
