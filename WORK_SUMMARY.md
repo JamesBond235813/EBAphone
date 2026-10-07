@@ -217,3 +217,5 @@
 - 推送尚未成功：当前环境的 macOS Keychain 没有可用于该 GitHub HTTPS 推送的凭据，Git 返回 `could not read Username for 'https://github.com'`。本地提交和远端配置已保留，完成 GitHub 登录/凭据配置后可运行 `git push -u origin main`。
 - 后续确认：现有 SSH key 的身份为账户 `JamesBond235813`，但它绑定为其他仓库的 deploy key，向本仓库推送被拒。为账户认证生成了独立本机密钥 `~/.ssh/github_ebaphone_2026`；添加其公钥到账户会扩大账户访问能力，正在等待用户对该权限变更的确认。完成添加后再推送 `main`。
 - 用户确认后已打开 GitHub 的 Add new SSH key 表单，填写公钥；GitHub 在提交时触发 sudo-mode 身份复核，页面停在 Confirm access，要求账户本人使用 GitHub Mobile 或邮件验证码完成验证。未代收/代输登录验证码；收到用户完成验证通知后，继续确认 key 已添加、为 EBAphone 配置专用 SSH host 并推送。
+- 用户完成 GitHub sudo-mode 复核后，确认新 key 可认证为 `JamesBond235813`；在 `~/.ssh/config` 添加 `github-ebaphone` 专用 host 别名（不影响原 Swallow_network deploy key），并将本仓库 origin 改为该 SSH 别名。
+- `git push -u origin main` 成功；EBAphone 的 `main` 已发布到 `git@github.com:JamesBond235813/EBAphone.git`，本地分支跟踪 `origin/main` 且工作区干净。提交包含初始源代码及后续交接总结；敏感 `.env`、SQLite、本地依赖、日志与备份均未推送。
