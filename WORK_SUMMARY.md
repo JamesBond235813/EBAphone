@@ -208,3 +208,10 @@
 - 修复表单内容贴边的问题，统一页面内边距、标签/说明层级、输入框高度与卡片间距；API Key 输入区改为完整宽度，提示词区域增加字符计数和上下文说明。
 - 页面底部提供连接测试与保存操作区，并单独展示安全边界说明；窄屏下表单改为单列布局。
 - 管理台 `npm run build` 成功。尝试通过浏览器自动化打开本地助手页面进行视觉复核时，浏览器控制调用超时，因此本轮未完成截图级浏览器复核；未运行测试套件。
+
+## 本次作业总结（2026-10-07：EBAphone GitHub 仓库推送）
+
+- 原项目目录此前不是 Git 仓库；已初始化 `main` 分支并设置 `origin` 为 `https://github.com/JamesBond235813/EBAphone.git`。
+- 加入 `.gitignore`，排除了本地环境密钥、SQLite 数据库、虚拟环境、前端依赖与构建产物、日志、备份和系统文件；只提交源代码、依赖锁定文件、示例环境配置和文档。
+- 已创建初始提交 `a67f9bc`（`Initial EBAphone project import`）。
+- 推送尚未成功：当前环境的 macOS Keychain 没有可用于该 GitHub HTTPS 推送的凭据，Git 返回 `could not read Username for 'https://github.com'`。本地提交和远端配置已保留，完成 GitHub 登录/凭据配置后可运行 `git push -u origin main`。
